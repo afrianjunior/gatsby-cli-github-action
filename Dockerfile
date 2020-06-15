@@ -1,4 +1,4 @@
-FROM node:10-slim
+FROM node:alpine
 
 LABEL version="1.0.0"
 LABEL "repository"="http://github.com/jzweifel/gatsby-cli-github-action"
@@ -10,6 +10,8 @@ LABEL "com.github.actions.description"="Wraps the Gatsby CLI to enable common Ga
 LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="purple"
 COPY LICENSE README.md THIRD_PARTY_NOTICE.md /
+
+RUN apt add libgl1-mesa-glx
 
 RUN yarn global add gatsby-cli
 
