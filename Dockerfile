@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:10.13.0-alpine
 
 LABEL version="1.0.0"
 LABEL "repository"="http://github.com/jzweifel/gatsby-cli-github-action"
