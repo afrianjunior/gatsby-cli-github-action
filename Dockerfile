@@ -12,6 +12,7 @@ LABEL "com.github.actions.color"="purple"
 COPY LICENSE README.md THIRD_PARTY_NOTICE.md /
 
 RUN yarn global add gatsby-cli
+RUN yarn global add cwebp-bin
 
 COPY entrypoint.sh /entrypoint.sh
 
